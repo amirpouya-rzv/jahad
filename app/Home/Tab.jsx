@@ -41,14 +41,14 @@ const TabsComponent = () => {
     <div className="w-[350px] md:w-full max-w-4xl mx-auto mt-16 mb-32">
       
       {/* Tabs Header */}
-      <div className="text-sm font-medium text-gray-700 border-b border-rose-500 rounded-2xl bg-gray-100">
+      <div className="text-sm font-medium text-gray-700 border-b border-teal-800 rounded-2xl bg-gray-100">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map(tab => (
             <li key={tab.id} className="flex-1">
               <button
                 className={`inline-block py-3 px-4 text-center font-medium transition-colors duration-300 ease-in-out ${
                   activeTab === tab.id
-                    ? 'text-black border-b-2 border-rose-500 bg-white'
+                    ? 'text-black border-b-2 border-teal-800 bg-white'
                     : 'text-gray-600 hover:text-black'
                 }`}
                 onClick={() => setActiveTab(tab.id)}
@@ -61,7 +61,7 @@ const TabsComponent = () => {
         </ul>
       </div>
       {/* Tabs Content */}
-      <div className="relative p-6 bg-white border border-rose-500 rounded-lg shadow-md mt-2">
+      <div className="relative p-6 bg-white border border-teal-800 rounded-lg shadow-md mt-2">
         {tabs.map(tab => (
           <div
             key={tab.id}
