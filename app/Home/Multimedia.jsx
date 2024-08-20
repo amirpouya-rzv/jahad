@@ -6,6 +6,7 @@ function Video() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
+  const containerRef = useRef(null);
 
   const media = [
     { URL: "https://docs.material-tailwind.com/demo.mp4", description: "دریا وامواج" },
@@ -35,7 +36,7 @@ function Video() {
   };
 
   return (
-    <div className="relative flex flex-col items-center my-4 px-4 mt-16 mb-32">
+    <div className="relative flex flex-col items-center my-4 px-4 mt-16 mb-32 ">
       {/* Title */}
       <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 mb-6">
         چندرسانه ای
@@ -43,19 +44,26 @@ function Video() {
       </h1>
 
       {/* Video container */}
-      <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl border-2 border-teal-800 mb-8">
-        <video
-          ref={videoRef}
-          className={`w-full h-[200px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out ${
-            currentIndex % 2 === 0 ? 'transform translate-x-0' : 'transform translate-x-[100%]'
-          }`}
-          controls={false}
-          poster="https://docs.material-tailwind.com/demo.jpg" // Thumbnail image
-          src={media[currentIndex].URL}
+      <div className="relative w-full max-w-4xl overflow-hidden shadow-2xl border-2 rounded-2xl border-teal-800 mb-8">
+        <div
+          ref={containerRef}
+          className="relative flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          <source src={media[currentIndex].URL} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          {media.map((item, index) => (
+            <video
+              key={index}
+              ref={index === currentIndex ? videoRef : null}
+              className="w-full h-[200px] md:h-[400px] object-cover flex-shrink-0"
+              controls={false}
+              poster="https://docs.material-tailwind.com/demo.jpg" // Thumbnail image
+              src={item.URL}
+            >
+              <source src={item.URL} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ))}
+        </div>
 
         {/* Custom controls */}
         <div className="absolute inset-0 flex items-center justify-between px-4 py-2 bg-gradient-to-t from-black to-transparent">
