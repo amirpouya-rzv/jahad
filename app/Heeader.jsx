@@ -10,7 +10,7 @@ function Header() {
     };
 
     return (
-        <nav className="bg-white border-b-4 border-teal-800 dark:bg-gray-900  w-screen   h-20 shadow-lg fixed top-0 z-50">
+        <nav className="bg-white border-b-4 border-  dark:bg-gray-900  w-screen   h-20 shadow-lg fixed top-0 z-50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="/download (1).png" className="h-16 w-16 rounded-full shadow-md hover:shadow-xl transition-all duration-300 ease-in-out" alt="Logo" />
@@ -18,7 +18,7 @@ function Header() {
                 <button
                     onClick={toggle}
                     type="button"
-                    className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-rose-500 transition-all duration-300 ease-in-out"
+                    className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-teal-800transition-all duration-300 ease-in-out"
                     aria-controls="navbar-default"
                     aria-expanded={isOpen}
                 >
