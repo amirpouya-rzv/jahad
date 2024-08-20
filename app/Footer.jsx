@@ -3,7 +3,6 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="flex flex-col items-center text-center text-gray-800 bg-white border-t-2 border-teal-800 p-6">
-      {/* Social Icons */}
       <div className="container px-6 pt-6">
         <div className="mb-6 flex justify-center space-x-4">
           <a
@@ -53,7 +52,6 @@ function Footer() {
           </a>
         </div>
 
-        {/* Contact Info */}
         <div className="mb-6">
           <p className="font-semibold text-lg  text-gray-888">
             نشانی: بلوار اشرفی اصفهانی - نرسیده به پل اتوبان همت - خیابان شهید قموشی - خیابان بهار
@@ -61,7 +59,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Footer Bottom */}
       <div className="w-full bg-teal-800 p-4 text-center text-white">
         © 2024 Copyright:
         <a className="font-semibold text-blue-200 hover:underline" href="https://tw-elements.com/">

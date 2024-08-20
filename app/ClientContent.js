@@ -1,19 +1,18 @@
 "use client";
 
 import { useEffect } from 'react';
-import AOS from 'aos'; // وارد کردن AOS
-import 'aos/dist/aos.css'; // وارد کردن استایل‌های AOS
+import AOS from 'aos'; 
+import 'aos/dist/aos.css'; 
 
 const ClientContent = ({ children }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // مدت زمان انیمیشن‌ها
-      once: false, // تنظیم به false برای اجرای انیمیشن‌ها هر بار که عنصر به صفحه می‌آید
+      duration: 1000, 
+      once: false, 
     });
 
-    // بازنشانی انیمیشن‌های AOS به صورت دستی
     const handleScroll = () => {
-      AOS.refresh(); // بازنشانی AOS برای ریست انیمیشن‌ها
+      AOS.refresh();
     };
 
     window.addEventListener('scroll', handleScroll);

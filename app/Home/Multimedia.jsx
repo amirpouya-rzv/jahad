@@ -37,13 +37,11 @@ function Video() {
 
   return (
     <div className="relative flex flex-col items-center my-4 px-4 mt-16 mb-32 ">
-      {/* Title */}
       <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 mb-6">
         چندرسانه ای
         <span className="block w-full border-b border-gray-500 mt-1"></span>
       </h1>
 
-      {/* Video container */}
       <div className="relative w-full max-w-4xl overflow-hidden shadow-2xl border-2 rounded-2xl border-teal-800 mb-8">
         <div
           ref={containerRef}
@@ -56,7 +54,7 @@ function Video() {
               ref={index === currentIndex ? videoRef : null}
               className="w-full h-[200px] md:h-[400px] object-cover flex-shrink-0"
               controls={false}
-              poster="https://docs.material-tailwind.com/demo.jpg" // Thumbnail image
+              poster="https://docs.material-tailwind.com/demo.jpg" 
               src={item.URL}
             >
               <source src={item.URL} type="video/mp4" />
@@ -65,7 +63,6 @@ function Video() {
           ))}
         </div>
 
-        {/* Custom controls */}
         <div className="absolute inset-0 flex items-center justify-between px-4 py-2 bg-gradient-to-t from-black to-transparent">
           <button
             onClick={handlePrevious}
@@ -92,7 +89,6 @@ function Video() {
         </div>
       </div>
 
-      {/* Video Description */}
       <div className="text-center text-gray-600 text-base md:text-lg mt-4">
         {media[currentIndex].description}
       </div>

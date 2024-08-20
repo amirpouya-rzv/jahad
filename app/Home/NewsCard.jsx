@@ -10,7 +10,6 @@ function NewsCard({ title, text, link, imageUrl }) {
       className="relative flex flex-col rounded-xl overflow-hidden shadow-md bg-white border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
       onClick={handleClick}
     >
-      {/* Background image */}
       <div className="relative h-48">
         <img
           src={imageUrl}
@@ -26,7 +25,6 @@ function NewsCard({ title, text, link, imageUrl }) {
         <span className="text-blue-500 font-semibold hover:underline transition-colors">ادامه مطلب</span>
       </div>
       
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity opacity-0 hover:opacity-30"></div>
     </div>
   );

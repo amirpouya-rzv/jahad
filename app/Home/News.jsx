@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import NewsCard from './NewsCard'; // Import the NewsCard component
+import NewsCard from './NewsCard'; 
 
 const news = [
   {
