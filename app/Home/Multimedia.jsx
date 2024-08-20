@@ -37,11 +37,13 @@ function Video() {
 
   return (
     <div className="relative flex flex-col items-center my-4 px-4 mt-16 mb-32 ">
+      
       <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 mb-6">
         چندرسانه ای
         <span className="block w-full border-b border-gray-500 mt-1"></span>
       </h1>
 
+     
       <div className="relative w-full max-w-4xl overflow-hidden shadow-2xl border-2 rounded-2xl border-teal-800 mb-8">
         <div
           ref={containerRef}
@@ -63,6 +65,7 @@ function Video() {
           ))}
         </div>
 
+        
         <div className="absolute inset-0 flex items-center justify-between px-4 py-2 bg-gradient-to-t from-black to-transparent">
           <button
             onClick={handlePrevious}
@@ -89,6 +92,7 @@ function Video() {
         </div>
       </div>
 
+    
       <div className="text-center text-gray-600 text-base md:text-lg mt-4">
         {media[currentIndex].description}
       </div>

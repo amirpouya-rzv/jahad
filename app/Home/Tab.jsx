@@ -40,6 +40,7 @@ const TabsComponent = () => {
      
     <div className="w-[350px] md:w-full max-w-4xl mx-auto mt-16 mb-32">
       
+      
       <div className="text-sm font-medium text-gray-700 border-b border-teal-800 rounded-2xl bg-gray-100">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map(tab => (
@@ -59,6 +60,7 @@ const TabsComponent = () => {
           ))}
         </ul>
       </div>
+      
       <div className="relative p-6 bg-white border border-teal-800 rounded-lg shadow-md mt-2">
         {tabs.map(tab => (
           <div

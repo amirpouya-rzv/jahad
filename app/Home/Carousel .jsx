@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 import { RxDotFilled } from "react-icons/rx";
+import Link from 'next/link';
 
 function Page() {
     const [slides, setSlides] = useState([
@@ -30,10 +31,11 @@ function Page() {
         setCurrentIndex(slideIndex);
     };
 
+    
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
-        }, 5000); s
+        }, 5000); 
 
         return () => clearInterval(interval); 
     }, [currentIndex]);
@@ -47,6 +49,7 @@ function Page() {
                 ></div>
             )}
 
+        
             <div
                 onClick={prevSlide}
                 className='absolute top-[50%]  -translate-y-1/2 left-2 md:left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/50 transition duration-300'
@@ -54,6 +57,7 @@ function Page() {
                 <GoChevronLeft size={30} />
             </div>
 
+           
             <div
                 onClick={nextSlide}
                 className='absolute top-[50%] -translate-y-1/2 right-2 md:right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/50 transition duration-300'
@@ -61,6 +65,7 @@ function Page() {
                 <GoChevronRight size={30} />
             </div>
 
+            
             <div className='flex justify-center py-2 absolute bottom-2 left-0 right-0'>
                 {slides.map((slide, slideIndex) => (
                     <div
