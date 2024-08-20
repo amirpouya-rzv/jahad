@@ -11,18 +11,18 @@ function Page() {
         <Carousel />
       </div>
 
-      <div data-aos="fade-left" data-aos-delay="200" data-aos-offset="200" data-aos-duration="1000">
+      <div data-aos="fade-down" data-aos-delay="200" data-aos-offset="200" data-aos-duration="1000">
         <Tab />
       </div>
 
-      <div data-aos="fade-right" data-aos-delay="400" data-aos-offset="200" data-aos-duration="1000">
+      <div data-aos="fade-up" data-aos-delay="400" data-aos-offset="200" data-aos-duration="1000">
         <Video />
       </div>
 
       <div data-aos="fade-down" data-aos-delay="600" data-aos-offset="200" data-aos-duration="1000">
         <News />
       </div>
-      <div data-aos="fade-down" data-aos-delay="600" data-aos-offset="200" data-aos-duration="1000">
+      <div data-aos="fade-up" data-aos-delay="600" data-aos-offset="200" data-aos-duration="1000">
         <Multimedia />
       </div>
     </div>
