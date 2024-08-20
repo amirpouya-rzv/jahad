@@ -18,7 +18,7 @@ function Header() {
                 <button
                     onClick={toggle}
                     type="button"
-                    className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-teal-800transition-all duration-300 ease-in-out"
+                    className="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-teal-800 transition-all duration-300 ease-in-out"
                     aria-controls="navbar-default"
                     aria-expanded={isOpen}
                 >
